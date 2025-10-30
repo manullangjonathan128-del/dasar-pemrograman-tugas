@@ -6,11 +6,11 @@ total_belanja_semua = 0
 print("====================================")
 print("       GEROBAK FRIED CHICKEN        ")
 print("====================================")
-print("Kode | Jenis Potong | Harga")
+print("Kode| Jenis Potong | Harga")
 print("----------------------------------")
-print("D    | Dada         | Rp. 2500")
-print("P    | Paha         | Rp. 2000")
-print("S    | Sayap        | Rp. 1500")
+print("D   | Dada         | Rp. 2500")
+print("P   | Paha         | Rp. 2000")
+print("S   | Sayap        | Rp. 1500")
 print("----------------------------------")
 
 
@@ -54,7 +54,7 @@ pajak = total_belanja_semua * pajak_persen
 total_bayar = total_belanja_semua + pajak
 
 print("====================================")
-print("       TOTAL PEMBAYARAN         ")
+print("      Gerobak Fired Chicken        ")
 print("====================================")
 print("Total Belanja (sebelum Pajak): Rp.", total_belanja_semua )
 print("Pajak (10%): Rp.", pajak)
