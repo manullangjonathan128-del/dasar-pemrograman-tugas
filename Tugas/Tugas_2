@@ -1,1 +1,63 @@
+jenis_potong = ["D","P","S"]
+pajak_persen = 0.10
 
+total_belanja_semua = 0
+
+print("====================================")
+print("       GEROBAK FRIED CHICKEN        ")
+print("====================================")
+print("Kode | Jenis Potong | Harga")
+print("----------------------------------")
+print("D    | Dada         | Rp. 2500")
+print("P    | Paha         | Rp. 2000")
+print("S    | Sayap        | Rp. 1500")
+print("----------------------------------")
+
+
+banyak_jenis = 0
+while banyak_jenis <= 0:
+    jenis = input("Masukkan Banyak Jenis (jenis potongan berbeda): ")
+    banyak_jenis = int(jenis)
+    if banyak_jenis <= 0:
+         print("Masukkan angka : ")
+
+
+for nomor_jenis in range(1, banyak_jenis + 1):
+    print("--- Jenis Ke ---", nomor_jenis, "---")
+    
+    kode_potong = ''
+    while kode_potong not in jenis_potong:
+        kode_potong = input("Masukkan Kode Potong [D/P/S]: ").upper()
+        if kode_potong not in jenis_potong:
+            print("Masukkan hanya D, P, atau S.")
+
+    banyak_potong = 0
+    while banyak_potong <= 0:
+        potong = input("Masukkan Banyak Potong : ")
+        banyak_potong = int(potong)
+
+        if kode_potong == "D":
+            harga_satuan = 2500
+        elif kode_potong == "P":
+            harga_satuan = 2000
+        else:
+            harga_satuan = 1500
+
+
+    subtotal = harga_satuan * banyak_potong
+    total_belanja_semua = subtotal + total_belanja_semua
+
+    print("Subtotal Jenis", (nomor_jenis), " : ", "Rp.", (subtotal))
+
+
+pajak = total_belanja_semua * pajak_persen
+total_bayar = total_belanja_semua + pajak
+
+print("====================================")
+print("       TOTAL PEMBAYARAN         ")
+print("====================================")
+print("Total Belanja (sebelum Pajak): Rp.", total_belanja_semua )
+print("Pajak (10%): Rp.", pajak)
+print("---------------------------------")
+print("Total Akhir Pembayaran : Rp.", int(total_bayar))
+print("====================================")
