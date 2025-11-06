@@ -11,4 +11,4 @@ print(data[0][2])
 print("Baris ketiga, Kolom ketiga adalah :")
 print(data[2][2])
 print("Baris Ke Empat, Kolom Pertama adalah :")
-print(data[3][0]) # 0
+print(data[3][0])
